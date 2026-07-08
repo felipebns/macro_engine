@@ -17,33 +17,12 @@ Os prompts usados estao dentro do codigo (em `services/prompts.py`), com separac
 - JSON final: explicita canais de transmissao e justificativas por setor/ticker.
 - Self-critique: revisa o JSON final e remove incoerencias, mantendo o mesmo schema.
 
-## Extensoes escolhidas
-
-- Self-critique loop: garante racional mais consistente e canais de transmissao mais claros.
-- Interface Streamlit: entrega uma UI simples e funcional para analise interativa.
-- Canais de transmissao explicitos: presentes no JSON final e no relatorio.
-
-## Por que escolhi aprofundar o Case 2
-
-O Case 2 pareceu mais desafiador e alinhado as minhas habilidades de Tech/AI. Ele permite demonstrar
-engenharia de dados, prompts, orquestracao e UI em um fluxo unico, e as extensoes agregam valor direto
-para a interpretacao macro-setorial.
-
-## Tempo gasto
-
-Aproximadamente 20 horas, gastei muito tempo para baixar os relatórios FOCUS, mas eles se mostraram excepcionalmente difíceis de extrair dados consistentemente. Como utilizo algumas chamadas de LLM aqui, gastei bastante tempo também configurando seus prompts e como eu estou pegando dados de múltiplas fontes também, o processamento deles para decidir um período ideal para análise demorou mais do que esperava
-
 ## Limitacoes identificadas
 
 - A comparacao usa o cenario atual do usuario versus variacoes historicas observadas, sem incorporar
 	projeoes de mercado oficiais como baseline.
 - Varias chamadas de LLM aumentam custo e podem propagar subjetividades ao longo do fluxo.
 - A integracao com o relatório Focus foi tentada, mas a extracao dos PDFs mostrou baixa confiabilidade.
-
-## Com mais 2 semanas eu faria
-
-- Integraria dados de projeoes do relatorio Focus como baseline do cenario, com parser mais robusto.
-- Implementaria validacao de consistencia dos outputs e testes automatizados para LLM e dados.
 
 ## Exemplo de execucao
 
